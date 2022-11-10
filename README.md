@@ -18,6 +18,8 @@ If one of the three levels reaches a value of 10. the pet dies.
 
 When the pet dies, the game displays that you are a bad pet owner.
 
+
+
 pseudo coding exercise:
  
 Start button should prompt to name pet
