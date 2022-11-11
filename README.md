@@ -26,7 +26,7 @@ Start button should prompt to name pet
  
 Update pet name from empty string
  
-if pet name is entered append:
+if pet name is entered display:
 feed value 0
 play value 0
 sleep value 0
