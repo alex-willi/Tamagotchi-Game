@@ -14,7 +14,7 @@ const startMenu = document.querySelector(".start")
 
 
 sleepBtn.addEventListener("click", () => {
-sleepValue.textContent++
+    sleepValue.textContent++
 })
 playBtn.addEventListener("click", () => {
     playValue.textContent++
@@ -26,5 +26,12 @@ feedBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
     inGame.style.display = "block"
     startMenu.style.display = "none"
-    
+    let petName =prompt("Enter a name for your Tamagotchi")
+    document.querySelector("#name").innerHTML = petName;
 })
+
+
+
+
+
+
