@@ -11,11 +11,13 @@ const hungerValue = document.querySelector(".hunger-value")
 const startBtn = document.querySelector("#start")
 const inGame = document.querySelector(".in-game")
 const startMenu = document.querySelector(".start")
+let age = document.querySelector(".age-value")
+let generalInterval = 0
 
 
 sleepBtn.addEventListener("click", () => {
     if(sleepValue.textContent < 10){
-    sleepValue.textContent++
+        sleepValue.textContent++
     }
 })
 playBtn.addEventListener("click", () => {
@@ -25,7 +27,7 @@ playBtn.addEventListener("click", () => {
 })
 feedBtn.addEventListener("click", () => {
     if(hungerValue.textContent < 10){
-    hungerValue.textContent++
+        hungerValue.textContent++
     }
 })
 
@@ -36,11 +38,13 @@ startBtn.addEventListener("click", () => {
     document.querySelector("#name").innerHTML = petName;
     if (petName !== ""){
         let gameTimer = setInterval(()=>{
+            generalInterval = generalInterval +1
+            console.log(generalInterval)
             let decreaseSleep = sleepValue.innerHTML = sleepValue.innerHTML -1
             let decreasePlay = playValue.innerHTML = playValue.innerHTML -1
             let decreaseHunger = hungerValue.innerHTML = hungerValue.innerHTML -1
             if (decreaseSleep === 0 || decreasePlay === 0 || decreaseHunger === 0){
-            clearInterval(gameTimer)
+                clearInterval(gameTimer)
             setTimeout(()=>{
                 alert("Your Tamagotchi died");
             }, 500)
