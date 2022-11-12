@@ -1,5 +1,5 @@
 const sleepBtn = document.querySelector("#sleep")
-const sleepValue = document.querySelector(".sleep-value")
+let sleepValue = document.querySelector(".sleep-value")
 
 const playBtn = document.querySelector("#play")
 const playValue = document.querySelector(".boredom-value")
@@ -28,6 +28,14 @@ startBtn.addEventListener("click", () => {
     startMenu.style.display = "none"
     let petName =prompt("Enter a name for your Tamagotchi")
     document.querySelector("#name").innerHTML = petName;
+    if (petName !== ""){
+        let gameTimer = setInterval(()=>{
+            let decress = sleepValue.innerHTML = sleepValue.innerHTML -1
+            if (decress === 0){
+            clearInterval(gameTimer)
+            }
+        },1000)
+    }
 })
 
 
