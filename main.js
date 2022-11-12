@@ -30,8 +30,10 @@ startBtn.addEventListener("click", () => {
     document.querySelector("#name").innerHTML = petName;
     if (petName !== ""){
         let gameTimer = setInterval(()=>{
-            let decress = sleepValue.innerHTML = sleepValue.innerHTML -1
-            if (decress === 0){
+            let decreaseSleep = sleepValue.innerHTML = sleepValue.innerHTML -1
+            let decreasePlay = playValue.innerHTML = playValue.innerHTML -1
+            let decreaseHunger = hungerValue.innerHTML = hungerValue.innerHTML -1
+            if (decreaseSleep === 0 || decreasePlay === 0 || decreaseHunger === 0){
             clearInterval(gameTimer)
             }
         },1000)
