@@ -14,13 +14,19 @@ const startMenu = document.querySelector(".start")
 
 
 sleepBtn.addEventListener("click", () => {
+    if(sleepValue.textContent < 10){
     sleepValue.textContent++
+    }
 })
 playBtn.addEventListener("click", () => {
+    if (playValue.textContent < 10){
     playValue.textContent++
+    }
 })
 feedBtn.addEventListener("click", () => {
+    if(hungerValue.textContent < 10){
     hungerValue.textContent++
+    }
 })
 
 startBtn.addEventListener("click", () => {
