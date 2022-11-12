@@ -41,6 +41,9 @@ startBtn.addEventListener("click", () => {
             let decreaseHunger = hungerValue.innerHTML = hungerValue.innerHTML -1
             if (decreaseSleep === 0 || decreasePlay === 0 || decreaseHunger === 0){
             clearInterval(gameTimer)
+            setTimeout(()=>{
+                alert("Your Tamagotchi died");
+            }, 500)
             }
         },1000)
     }
