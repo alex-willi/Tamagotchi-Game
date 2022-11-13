@@ -26,13 +26,13 @@ sleepBtn.addEventListener("click", () => {
     }
 })
 playBtn.addEventListener("click", () => {
-    if (Tamagotchi.playValue.textContent < 10){
-    Tamagotchi.playValue.textContent++
+    if (Tamagotchi.playValue.textContent > 0){
+    Tamagotchi.playValue.textContent--
     }
 })
 feedBtn.addEventListener("click", () => {
-    if(Tamagotchi.hungerValue.textContent < 10){
-        Tamagotchi.hungerValue.textContent++
+    if(Tamagotchi.hungerValue.textContent > 0){
+        Tamagotchi.hungerValue.textContent--
     }
 })
 
@@ -49,9 +49,9 @@ startBtn.addEventListener("click", () => {
             }
             console.log(generalInterval)
             let decreaseSleep = Tamagotchi.sleepValue.innerHTML++
-            let decreasePlay = Tamagotchi.playValue.innerHTML = Tamagotchi.playValue.innerHTML -1
-            let decreaseHunger = Tamagotchi.hungerValue.innerHTML = Tamagotchi.hungerValue.innerHTML -1
-            if (decreaseSleep === 10 || decreasePlay === 0 || decreaseHunger === 0){
+            let decreasePlay = Tamagotchi.playValue.innerHTML++
+            let decreaseHunger = Tamagotchi.hungerValue.innerHTML++
+            if (decreaseSleep === 10 || decreasePlay === 10 || decreaseHunger === 10){
                 clearInterval(gameTimer)
             setTimeout(()=>{
                 alert("Your Tamagotchi died");
