@@ -15,7 +15,7 @@ const playBtn = document.querySelector("#play")
 const feedBtn = document.querySelector("#feed")
 
 const startBtn = document.querySelector("#start")
-const inGame = document.querySelector(".in-game")
+const hide = document.querySelector("#hide")
 const startMenu = document.querySelector(".start")
 let generalInterval = 0
 
@@ -37,7 +37,7 @@ feedBtn.addEventListener("click", () => {
 })
 
 startBtn.addEventListener("click", () => {
-    inGame.style.display = "block"
+    hide.style.display = "block"
     startMenu.style.display = "none"
     let promptName =prompt("Enter a name for your Tamagotchi")
     Tamagotchi.petName.innerHTML = promptName;

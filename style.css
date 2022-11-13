@@ -6,6 +6,7 @@ body {
     display: grid;
     grid-template-rows: 30% 100% 30%;
     text-align: center;
+    display: none;
 }
 .start p{
     display: flex;
@@ -13,6 +14,44 @@ body {
     justify-content: center;
     font-size: 50px;
 }
+#hide{
+}
 .in-game{
-    display: none;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
+}
+.values{
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+.value-names{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(188, 189, 186, 0.925);
+    border-radius: 30px;
+}
+#name{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.tamagotchi{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 90px;
+}
+#play{
+    padding-left: 29px;
+    padding-right: 29px;
+}
+#feed{
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
 }
