@@ -11,7 +11,7 @@ const hungerValue = document.querySelector(".hunger-value")
 const startBtn = document.querySelector("#start")
 const inGame = document.querySelector(".in-game")
 const startMenu = document.querySelector(".start")
-let age = document.querySelector(".age-value")
+let age = document.querySelector("#age-value")
 let generalInterval = 0
 
 
@@ -39,6 +39,9 @@ startBtn.addEventListener("click", () => {
     if (petName !== ""){
         let gameTimer = setInterval(()=>{
             generalInterval = generalInterval +1
+            if ((generalInterval % 10) === 0 ){
+                age.innerHTML++
+            }
             console.log(generalInterval)
             let decreaseSleep = sleepValue.innerHTML = sleepValue.innerHTML -1
             let decreasePlay = playValue.innerHTML = playValue.innerHTML -1
