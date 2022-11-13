@@ -6,7 +6,6 @@ body {
     display: grid;
     grid-template-rows: 30% 100% 30%;
     text-align: center;
-    display: none;
 }
 .start p{
     display: flex;
@@ -15,6 +14,7 @@ body {
     font-size: 50px;
 }
 #hide{
+    display: none;
 }
 .in-game{
     display:grid;
@@ -34,7 +34,7 @@ body {
 }
 #name{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
 }
 .tamagotchi{

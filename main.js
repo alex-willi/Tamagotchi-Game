@@ -18,6 +18,7 @@ const startBtn = document.querySelector("#start")
 const hide = document.querySelector("#hide")
 const startMenu = document.querySelector(".start")
 let generalInterval = 0
+let nameInput = document.querySelector("#name-input")
 
 
 sleepBtn.addEventListener("click", () => {
@@ -39,8 +40,7 @@ feedBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
     hide.style.display = "block"
     startMenu.style.display = "none"
-    let promptName =prompt("Enter a name for your Tamagotchi")
-    Tamagotchi.petName.innerHTML = promptName;
+    Tamagotchi.petName.innerHTML = nameInput.value;
     if (Tamagotchi.petName !== ""){
         let gameTimer = setInterval(()=>{
             generalInterval = generalInterval +1
