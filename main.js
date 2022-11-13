@@ -20,6 +20,7 @@ const startMenu = document.querySelector(".start")
 let generalInterval = 0
 let nameInput = document.querySelector("#name-input")
 let gameOver = document.querySelector("#game-over")
+let playAgain = document.querySelector("#play-again")
 
 
 sleepBtn.addEventListener("click", () => {
@@ -48,13 +49,14 @@ startBtn.addEventListener("click", () => {
             if ((generalInterval % 10) === 0 ){
                 Tamagotchi.age.innerHTML++
             }
-            console.log(generalInterval)
             let decreaseSleep = Tamagotchi.sleepValue.innerHTML++
             let decreasePlay = Tamagotchi.playValue.innerHTML++
             let decreaseHunger = Tamagotchi.hungerValue.innerHTML++
             if (decreaseSleep > 9 || decreasePlay > 9  || decreaseHunger > 9){
                 clearInterval(gameTimer)
                 gameOver.style.display = "inline"
+                playAgain.style.display = "block"
+
             }
         },1000)
     }

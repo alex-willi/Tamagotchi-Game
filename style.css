@@ -58,3 +58,6 @@ body {
 #game-over{
     display: none;
 }
+#play-again{
+    display: none;
+}
