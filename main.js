@@ -19,6 +19,7 @@ const hide = document.querySelector("#hide")
 const startMenu = document.querySelector(".start")
 let generalInterval = 0
 let nameInput = document.querySelector("#name-input")
+let gameOver = document.querySelector("#game-over")
 
 
 sleepBtn.addEventListener("click", () => {
@@ -53,7 +54,7 @@ startBtn.addEventListener("click", () => {
             let decreaseHunger = Tamagotchi.hungerValue.innerHTML++
             if (decreaseSleep > 9 || decreasePlay > 9  || decreaseHunger > 9){
                 clearInterval(gameTimer)
-                alert("Your Tamagotchi died");
+                gameOver.style.display = "inline"
             }
         },1000)
     }
