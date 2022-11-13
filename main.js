@@ -38,7 +38,6 @@ feedBtn.addEventListener("click", () => {
         Tamagotchi.hungerValue.textContent--
     }
 })
-
 startBtn.addEventListener("click", () => {
     hide.style.display = "block"
     startMenu.style.display = "none"
@@ -61,6 +60,18 @@ startBtn.addEventListener("click", () => {
         },1000)
     }
 })
+
+playAgain.addEventListener("click",() =>{
+    startMenu.style.display = "grid"
+    hide.style.display = "none"
+    playAgain.style.display = "none"
+    gameOver.style.display = "none"
+    Tamagotchi.sleepValue.innerHTML = 0
+    Tamagotchi.playValue.innerHTML = 0
+    Tamagotchi.hungerValue.innerHTML = 0
+    Tamagotchi.age.innerHTML = 0
+
+} )
 
 
 
