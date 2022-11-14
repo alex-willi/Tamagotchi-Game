@@ -45,27 +45,27 @@ feedBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
   hide.style.display = "block";
   startMenu.style.display = "none";
-  Tamagotchi.petName.innerHTML = nameInput.value;
+  Tamagotchi.petName.textContent = nameInput.value;
   if (Tamagotchi.petName !== "") {
     let gameTimer = setInterval(() => {
       generalInterval = generalInterval + 1;
       if (generalInterval % 10 === 0) {
-        Tamagotchi.age.innerHTML++;
+        Tamagotchi.age.textContent++;
       }
-      let decreaseSleep = Tamagotchi.sleepValue.innerHTML++;
-      let decreasePlay = Tamagotchi.playValue.innerHTML++;
-      let decreaseHunger = Tamagotchi.hungerValue.innerHTML++;
+      let decreaseSleep = Tamagotchi.sleepValue.textContent++;
+      let decreasePlay = Tamagotchi.playValue.textContent++;
+      let decreaseHunger = Tamagotchi.hungerValue.textContent++;
       if (decreaseSleep < 4 || decreasePlay < 4 || decreaseHunger < 4) {
-        icon.innerHTML = "😀";
+        icon.textContent = "😀";
       }
       if (decreaseSleep > 4 || decreasePlay > 4 || decreaseHunger > 4) {
-        icon.innerHTML = "😐";
+        icon.textContent = "😐";
       }
       if (decreaseSleep > 8 || decreasePlay > 8 || decreaseHunger > 8) {
-        icon.innerHTML = "😧";
+        icon.textContent = "😧";
       }
       if (decreaseSleep == 10 || decreasePlay == 10 || decreaseHunger == 10) {
-        icon.innerHTML = "☠️";
+        icon.textContent = "☠️";
       }
       if (decreaseSleep > 9 || decreasePlay > 9 || decreaseHunger > 9) {
         clearInterval(gameTimer);
@@ -81,8 +81,8 @@ playAgain.addEventListener("click", () => {
   hide.style.display = "none";
   playAgain.style.display = "none";
   gameOver.style.display = "none";
-  Tamagotchi.sleepValue.innerHTML = 0;
-  Tamagotchi.playValue.innerHTML = 0;
-  Tamagotchi.hungerValue.innerHTML = 0;
-  Tamagotchi.age.innerHTML = 0;
+  Tamagotchi.sleepValue.textContent = 0;
+  Tamagotchi.playValue.textContent = 0;
+  Tamagotchi.hungerValue.textContent = 0;
+  Tamagotchi.age.textContent = 0;
 });
