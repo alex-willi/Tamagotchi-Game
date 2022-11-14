@@ -1,5 +1,7 @@
 body {
     background-color: aqua;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .start{
@@ -25,16 +27,33 @@ body {
     justify-content: space-around;
     background-color: aliceblue;
     border-radius: 30px;
+    align-items: center;
+    font-size: large;
 }
 .value-names{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: rgba(188, 189, 186, 0.925);
     border-radius: 30px;
+    font-size: large;
 }
 #name{
     display: flex;
     justify-content: center;
+    font-size: x-large;
+    background-color: aliceblue;
+    border-radius: 30px;
+    width: auto;
+
+}
+#name-input{
+    text-align: center;
+    font-size: large;
+    margin-bottom: 30px;
+}
+::placeholder{
+    color: rgb(0, 0, 0);
 
 }
 .tamagotchi{
@@ -43,11 +62,19 @@ body {
     align-items: center;
     font-size: 90px;
 }
+#sleep{
+    background-color: aliceblue;
+    font-size: large;
+}
 #play{
+    background-color: aliceblue;
+    font-size: large;
     padding-left: 29px;
     padding-right: 29px;
 }
 #feed{
+    background-color: aliceblue;
+    font-size: large;
     padding-left: 28px;
     padding-right: 28px;
 }
@@ -59,5 +86,12 @@ body {
     display: none;
 }
 #play-again{
+    padding: 30px 20px 30px 20px;
     display: none;
+    font-size: large;
+}
+#start{
+    height: 60px;
+    font-size: large;
+    background-color: aliceblue;
 }
