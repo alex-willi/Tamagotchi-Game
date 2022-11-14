@@ -51,6 +51,9 @@ startBtn.addEventListener("click", () => {
             let decreaseSleep = Tamagotchi.sleepValue.innerHTML++
             let decreasePlay = Tamagotchi.playValue.innerHTML++
             let decreaseHunger = Tamagotchi.hungerValue.innerHTML++
+            if (decreaseSleep < 4 || decreasePlay < 4 || decreaseHunger < 4){
+                icon.innerHTML = "😀"
+            }
             if (decreaseSleep > 4 || decreasePlay > 4 || decreaseHunger > 4){
                 icon.innerHTML = "😐"
             }
