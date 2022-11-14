@@ -69,7 +69,7 @@ startBtn.addEventListener("click", () => {
                 playAgain.style.display = "block"
 
             }
-        },1500)
+        },2000)
     }
 })
 
